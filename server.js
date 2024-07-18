@@ -16,6 +16,9 @@ app.use("/api/auth", router);
 app.get("/", (req, res) => {
   res.send("welcome user");
 });
+app.get("/contact",(req,res)=>{
+  res.send("No contact details");
+});
 connectDb().then(() => {
   app.listen(5000, () => {
     console.log("server is running on port 5000");
